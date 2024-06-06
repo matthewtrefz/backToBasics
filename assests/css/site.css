@@ -1,0 +1,318 @@
+@import url('_variable.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--sans-serif);
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+body {
+    background-color: var(--white);
+/* background: repeating-linear-gradient(
+        transparent,
+        transparent calc(var(--size-text--default) * 1.25 - 1px),
+        rgba(255, 0, 0, 1) calc(var(--size-text--default) * 1.25),
+        transparent calc((var(--size-text--default) * 1.25) - 1px)
+    );*/
+    color: var(--black);
+}
+
+blockquote, caption, fieldset, figure, figcaption, h1, h2, h3, h4, h5, h6, li, ol, p, pre, sub, sup, table, ul {
+    margin: 0;
+    padding: 0;
+}
+
+blockquote, caption, figcaption, h1, h2, h3, h4, h5, h6, li, p, pre, sub, span, sup {
+    font-size: var(--size-text--default);
+    font-weight: normal;
+    line-height: var(--size-baseline);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--serif);
+    font-size: var(--size-text--lg);
+    line-height: var(--line-height--lg);
+    margin-block-start: calc(var(--size-text--lg) * 2.22);
+}
+
+h1:first-child,
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+    margin-block-start: 0;
+}
+
+p + p {
+    margin-block-start: calc(var(--size-baseline));
+}
+
+ul, ol {
+    list-style-position: outside;
+    margin-block: var(--size-baseline);
+    margin-inline: var(--size-space--md)
+}
+
+.site {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.site__body {
+    padding-inline: var(--size-space--md);
+}
+
+.site__footer {
+
+}
+
+.site__header {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: var(--size-space--sm) var(--size-space--md);
+}
+
+.site__nav {
+    background-color: var(--white);
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    transition: bottom 300ms;
+    width: 100vw;
+}
+
+.site__nav.isHidden {
+    bottom: 100%;
+}
+
+.site__nav > ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    list-style: none;
+    justify-content: center;
+
+    li {
+        overlfow: hidden;
+        text-align: center;
+    }
+
+    & a {
+        display: inline-block;
+        padding-block: var(--size-space--sm);
+        padding-inline: var(--size-space--md);
+        transition: background-color 400ms, color 500ms;
+        width: 100%;
+    }
+
+    & a:hover {
+        background-color: var(--black);
+        color: var(--white-bright);
+    }
+}
+
+.logo {
+    width: 2.1935rem;
+}
+
+.device-thumb {
+    height: 2.1935rem;
+}
+
+figure,
+.image-caption {
+    margin-block: var(--size-baseline);
+}
+
+figure img,
+.image-caption img {
+border: 1px solid var(--black);
+border-radius: 0.125rem;
+width: 100%;
+}
+
+figcaption,
+.image-caption-text {
+    color: var(--gray);
+    font-size: var(--size-text--sm);
+}
+
+#home blockquote {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#home blockquote p:first-child {
+    font-family: var(--serif);
+    font-size: var(--size-text--lg);
+    font-weight: 800;
+}
+
+/*.image-block {*/
+/*    background-color: rgba(255, 255, 255);*/
+/*    height: var(--size-baseline);*/
+/*    width: 100%;*/
+/*    grid-column: 2 / 5*/
+/*}*/
+
+.block {
+    background-color: rgba(255, 255, 255);
+    height: var(--size-baseline);
+    width: 2rem;
+}
+.block:nth-child(2) {
+    background-color: rgba(0, 0, 255);
+}
+.block:nth-child(3) {
+    background-color: rgba(255, 0, 0);
+}
+.block:nth-child(4) {
+    background-color: rgba(255, 255, 0);
+}
+
+
+@media screen and (width >= 320px) {
+    .site {
+        /*background-color: rgba(0, 255, 0, 0.5);*/
+        overflow: hidden;
+    }
+
+    .site__header {
+        /*background-color: rgba(255, 255, 0, 0.5);*/
+    }
+
+    .site__body {
+        /*background-color: rgba(0, 255, 0, 0.5);*/
+        flex: 1 1 auto;
+        overflow: auto;
+    }
+
+    caption, figcaption, h1, h2, h3, h4, h5, h6, p, pre, span {
+        /*    background-color: rgba(0,0,0,0.15);*/
+        max-width: var(--comfort-character-count);
+    }
+
+    h1,
+    h1:first-child {
+        font-size: var(--size-text--xl);
+        line-height: var(--line-height--xl);
+        margin-block-start: var(---line-height--xl);
+        margin-block-end: var(--size-space--md);
+        max-width: var(--comfort-lg-character-count);
+    }
+
+    #home blockquote p:first-child {
+        font-size: var(--size-text--xl);
+        font-weight: 600;
+        line-height: var(--line-height--xl);
+        margin-block-start: var(--line-height--xl);
+        max-width: var(--comfort-lg-character-count);
+    }
+}
+
+@media screen and (width >= 600px) {
+    .site__body {
+        align-items: start;
+        column-gap: var(--size-space--md);
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 5fr 1fr 0.5fr;
+        justify-items: start;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    ul,
+    ol,
+    #home blockquote {
+        grid-column: 3;
+    }
+
+    figure {
+        align-items: flex-start;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: var(--size-space--md);
+        grid-column: 2 / 5;
+    }
+
+    figure img,
+    .image-caption img {
+        border-width: 3px;
+        border-radius: 0.25rem;
+        width: 100%;
+    }
+
+    #home blockquote {
+        grid-column: 3;
+    }
+}
+
+@media screen and (width >= 700px)  {
+
+    h1 {
+        font-size: var(--size-text--xxl);
+        line-height: var(--line-height--xxl);
+        max-width: var(--comfort-character-count);
+    }
+
+    h2 {
+        font-size: var(--size-text--xl);
+        line-height: var(--line-height--xl);
+        max-width: var(--comfortlg--character-count);
+    }
+
+}
+
+@media screen and (width >= 800px)  {
+    .site__body {
+        grid-template-columns: 0.5fr 1fr 2.5fr 2.5fr 1fr 0.5fr;
+    }
+
+    h3 {
+        font-size: var(--size-text--xl);
+        line-height: var(--line-height--xl);
+        max-width: var(--comfortlg--character-count);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    #home blockquote {
+        grid-column: 2 / 5;
+    }
+
+    p,
+    ul,
+    ol {
+        grid-column: 2 / 4;
+    }
+
+    figure,
+    .image-caption {
+        flex-flow: column nowrap;
+        grid-column: 4 / 6;
+        margin-block-start: 0;
+    }
+
+
+}

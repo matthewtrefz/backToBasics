@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Commissioner';
+    src:
+        url('../fonts/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'SongMyung';
+    src:
+        url('../fonts/SongMyung-Regular.ttf') format('truetype')
+}
+
+:root {
+
+    --golden-ratio: 1.618;
+
+    --size-base: 1rem;
+    --size-baseline: calc(var(--size-base) * 1.25);
+
+    --size-text--xs: 0.625rem;/*10*/
+    --size-text--sm: 0.75rem;/*12*/
+    --size-text--md: var(--size-base);/*16*/
+    --size-text--lg: 1.125rem;/*18*/
+    --size-text--xl: 1.875rem;/*30*/
+    --size-text--xxl: 3rem; /*48*/
+
+    --line-height--sm: calc(var(--size-text--sm) * 1.665);
+    --line-height--md: var(--size-baseline);
+    --line-height--lg: calc(var(--size-text--lg) * 1.11);
+    --line-height--xl: calc(var(--size-text--xl) * 1.335);
+    --line-height--xxl: calc(var(--size-text--xxl) * 1.25);
+
+
+    --size-text--default: var(--size-text--md);
+    --comfort-character-count: 48ch;
+    --comfort-lg-character-count: 24ch;
+
+    --size-space--sm: calc(var(--size-baseline) * 0.5);
+    --size-space--md: var(--size-baseline);
+    --size-space--lg: calc(var(--size-baseline) * 2);
+    
+    --sans-serif: Commissioner, sans-serif;
+    --serif: SongMyung, serif;
+    
+    --black: rgb(9,0,15);
+    --gray: rgb(119,117,120);
+    --white: rgb(255, 253, 252);
+    --white-bright: rgb(255, 255, 255);
+}
