@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: var(--sans-serif);
+    font-family: var(--sans-serif), sans-serif;
 }
 
 html,
@@ -39,7 +39,7 @@ blockquote, caption, figcaption, h1, h2, h3, h4, h5, h6, li, p, pre, sub, span, 
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--serif);
+    font-family: var(--serif), serif;
     font-size: var(--size-text--lg);
     line-height: var(--line-height--lg);
     margin-block-start: calc(var(--size-text--lg) * 2.22);
@@ -107,7 +107,7 @@ ul, ol {
     justify-content: center;
 
     li {
-        overlfow: hidden;
+        overflow: hidden;
         text-align: center;
     }
 
@@ -151,13 +151,17 @@ figcaption,
     font-size: var(--size-text--sm);
 }
 
+#home {
+    padding-block-end: var(--size-space--md);
+}
+
 #home blockquote {
     display: flex;
     flex-flow: column nowrap;
 }
 
 #home blockquote p:first-child {
-    font-family: var(--serif);
+    font-family: var(--serif), serif;
     font-size: var(--size-text--lg);
     font-weight: 800;
 }
@@ -210,7 +214,7 @@ figcaption,
     h1:first-child {
         font-size: var(--size-text--xl);
         line-height: var(--line-height--xl);
-        margin-block-start: var(---line-height--xl);
+        margin-block-start: var(--line-height--xl);
         margin-block-end: var(--size-space--md);
         max-width: var(--comfort-lg-character-count);
     }
@@ -229,6 +233,7 @@ figcaption,
         align-items: start;
         column-gap: var(--size-space--md);
         display: grid;
+        flex: 0 1 auto;
         grid-template-columns: 0.5fr 1fr 5fr 1fr 0.5fr;
         justify-items: start;
     }
@@ -276,12 +281,12 @@ figcaption,
     h2 {
         font-size: var(--size-text--xl);
         line-height: var(--line-height--xl);
-        max-width: var(--comfortlg--character-count);
+        max-width: var(--comfort-lg-character-count);
     }
 
 }
 
-@media screen and (width >= 800px)  {
+/*@media screen and (width >= 800px)  {
     .site__body {
         grid-template-columns: 0.5fr 1fr 2.5fr 2.5fr 1fr 0.5fr;
     }
@@ -289,7 +294,7 @@ figcaption,
     h3 {
         font-size: var(--size-text--xl);
         line-height: var(--line-height--xl);
-        max-width: var(--comfortlg--character-count);
+        max-width: var(--comfort-lg--character-count);
     }
 
     h1,
@@ -315,4 +320,4 @@ figcaption,
     }
 
 
-}
+}*/
